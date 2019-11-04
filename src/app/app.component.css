@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+}
+
+app-navbar {
+    grid-column: 1;
+}
+
+router-outlet {
+    grid-column: 1;
+}
