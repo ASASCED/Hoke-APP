@@ -1,0 +1,132 @@
+<div class="container">
+    <div class="row type-reciped">
+        <nav>
+            <ul>
+                <li><a (click)="menuSelection(0)">Import files</a></li>
+                <li><a (click)="menuSelection(1)">Name and Address</a></li>
+                <li><a (click)="menuSelection(2)">General policy info</a></li>
+                <li><a (click)="menuSelection(3)">Drivers</a></li>
+                <li><a (click)="menuSelection(4)">Vehicles</a></li>
+                <li><a (click)="menuSelection(5)">Receipt</a></li>
+                <li><a (click)="menuSelection(6)">JustAuto forms</a></li>
+            </ul>
+        </nav>
+        <div class="col">
+            <div id="import-files" class="row animated fadeIn" *ngIf="selector == 0">
+                <div class="col-12">
+                    <h6>Import files</h6>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+            </div>
+            <div id="name-address" class="row animated fadeIn" *ngIf="selector == 1">
+                <div class="col-12">
+                    <h6>Name and Address</h6>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+                <div class="col-12">
+                    <div class="mini-section"></div>
+                </div>
+                <div class="col-12">
+                    <div class="mini-section"></div>
+                </div>
+            </div>
+            <div id="general-policy" class="row animated fadeIn" *ngIf="selector == 2">
+                <div class="col-12">
+                    <h6>General policy info</h6>
+                    <div class="row">
+                        <div class="mini-section">
+
+                        </div>
+                    </div>
+                    <!-- ! Table -->
+                    <div class="row">
+                        <div class="col-12">
+                            <p style="line-height: 2.5em;">
+                                <input type="radio" id="p1" name="p" class="k-radio" />
+                                <label class="k-radio-label" for="p1">New Customer</label><br />
+                                <input type="radio" id="p2" name="p" class="k-radio" />
+                                <label class="k-radio-label" for="p2">Existing Curtomer</label><br />
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <kendo-grid [data]="gridData" [pageSize]="state.take" [skip]="state.skip"
+                                [sort]="state.sort" [filter]="state.filter" [sortable]="true" [pageable]="true"
+                                [filterable]="true" (dataStateChange)="dataStateChange($event)">
+                                <kendo-grid-column field="ProductID" title="ID" width="40" [filterable]="false">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="ProductName" title="Product Name">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="FirstOrderedOn" title="First Ordered On" width="240"
+                                    filter="date" format="{0:d}">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="UnitPrice" title="Unit Price" width="180" filter="numeric"
+                                    format="{0:c}">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="Discontinued" width="120" filter="boolean">
+                                    <ng-template kendoGridCellTemplate let-dataItem>
+                                        <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+                                    </ng-template>
+                                </kendo-grid-column>
+                            </kendo-grid>
+                        </div>
+                    </div>
+                    <!-- ! END Table -->
+                </div>
+            </div>
+            <div id="drivers" class="row animated fadeIn" *ngIf="selector == 3">
+                <div class="col-12">
+                    <h6>Drivers</h6>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+            </div>
+            <div id="vehicles" class="row animated fadeIn" *ngIf="selector == 4">
+                <div class="col-12">
+                    <h6>Vehicles</h6>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+            </div>
+            <div id="receipt" class="row animated fadeIn" *ngIf="selector == 5">
+                <div class="col-12">
+                    <h6>Receipt</h6>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+            </div>
+            <div id="receipt" class="row animated fadeIn" *ngIf="selector == 6">
+                <div class="col-12">
+                    <h6>JustAuto Forms</h6>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+                <div class="col">
+                    <div class="mini-section"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

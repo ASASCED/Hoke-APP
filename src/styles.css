@@ -39,3 +39,31 @@
 .fadeIn {
     animation-name: fadeIn;
 }
+
+/* * KENDO */
+
+/* ! Tabla */
+.k-pager-numbers .k-link:hover,
+.k-pager-numbers .k-link.k-state-hover {
+    color: var(--fontFocus);
+    background-color: #ededed;
+}
+
+.k-widget ::selection,
+.k-block ::selection,
+.k-panel ::selection {
+    background-color: var(--fontFocus);
+    color: #fff;
+}
+
+.k-pager-numbers .k-state-selected {
+    color: #fff;
+    background-color: var(--fontFocus);
+}
+
+/* ! DropdownList */
+
+.k-list .k-item.k-state-selected {
+    background: var(--fontFocus);
+    color: white;
+}

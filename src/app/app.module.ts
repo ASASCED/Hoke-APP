@@ -18,6 +18,8 @@ import { MenuComponent } from './components/controlPanel/menu/menu.component';
 import { NavbarComponent } from './components/controlPanel/navbar/navbar.component';
 import { ReceiptComponent } from './components/controlPanel/receipt/receipt.component';
 import { LayoutModule } from '@progress/kendo-angular-layout';
+import { ImportQuoteComponent } from './components/controlPanel/import-quote/import-quote.component';
+import { LastMenuComponent } from './components/controlPanel/last-menu/last-menu.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { LayoutModule } from '@progress/kendo-angular-layout';
         MenuComponent,
         NavbarComponent,
         ReceiptComponent,
+        ImportQuoteComponent,
+        LastMenuComponent,
     ],
     imports: [
         BrowserModule,

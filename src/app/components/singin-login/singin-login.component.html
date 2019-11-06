@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="bg"></div>
+  <div class="row align-items-center justify-content-center animated fadeIn" style="height: 100vh">
+    <div class="col-md-7 col-sm-2 image">
+      <img class="side-img" src="assets/signIn.svg" alt="" />
+    </div>
+    <div class="col-md-5 col-sm-10">
+      <div class="content">
+        <button class="cg-btn" [class.footer-tag]="mostrar == true" (click)="mostrar = true">
+          Sing In
+        </button>
+        <button class="cg-btn" [class.footer-tag]="mostrar == false" (click)="mostrar = false">
+          Log In
+        </button>
+        <figure>
+          <img class="circle-img" src="assets/login.svg" alt="" />
+        </figure>
+        <form class="inp" onsubmit="return validate()" *ngIf="mostrar == false">
+          <input id="_email" type="text" class="email" placeholder="login" />
+          <br />
+          <input id="_password" type="password" class="pass" placeholder="password" />
+          <br />
+          <button class="at-btn">Log in</button>
+        </form>
+        <form class="inp" onsubmit="return validate()" *ngIf="mostrar == true">
+          <input id="_email" type="text" class="email" placeholder="broker name" />
+          <br />
+          <input id="_email" type="text" class="email" placeholder="address" />
+          <br />
+          <input id="_email" type="text" class="email" placeholder="phone" />
+          <br />
+          <input id="_email" type="text" class="email" placeholder="phone customer service" />
+          <br />
+          <input id="_email" type="text" class="email" placeholder="email" />
+          <br />
+          <input id="_email" type="text" class="email" placeholder="website" />
+          <br />
+          <input id="_password" type="password" class="pass" placeholder="password" />
+          <br />
+          <button class="at-btn" *ngIf="mostrar == false">Log in</button>
+          <button class="at-btn" *ngIf="mostrar == true">Sign in</button>
+        </form>
+        <div class="min-footer">
+          <a href="#">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

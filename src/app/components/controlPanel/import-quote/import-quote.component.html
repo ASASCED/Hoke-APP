@@ -1,0 +1,86 @@
+<div class="container animated fadeIn">
+    <div class="row type-reciped">
+        <div class="col">
+            <div class="mini-section">
+                <div class="row">
+                    <div class="col">
+                        <h6>Name: </h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6>Physical Address: </h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6>H Phone: </h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6>Curtomer type: </h6>
+                        <kendo-dropdownlist style="width: 200px;" [data]="listItems" [value]="'Basketball'"
+                            class="drop-down">
+                        </kendo-dropdownlist>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="mini-section">
+                <div class="row">
+                    <div class="col">
+                        <h6>Name: </h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6>Physical Address: </h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6>H Phone: </h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6>Curtomer type: </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ! Table -->
+        <div class="col-12">
+            <p style="line-height: 2.5em;">
+                <input type="radio" id="p1" name="p" class="k-radio" />
+                <label class="k-radio-label" for="p1">New Customer</label><br />
+                <input type="radio" id="p2" name="p" class="k-radio" />
+                <label class="k-radio-label" for="p2">Existing Curtomer</label><br />
+            </p>
+        </div>
+        <div class="col-12">
+            <kendo-grid [data]="gridData" [pageSize]="state.take" [skip]="state.skip" [sort]="state.sort"
+                [filter]="state.filter" [sortable]="true" [pageable]="true" [filterable]="true"
+                (dataStateChange)="dataStateChange($event)">
+                <kendo-grid-column field="ProductID" title="ID" width="40" [filterable]="false">
+                </kendo-grid-column>
+                <kendo-grid-column field="ProductName" title="Product Name">
+                </kendo-grid-column>
+                <kendo-grid-column field="FirstOrderedOn" title="First Ordered On" width="240" filter="date"
+                    format="{0:d}">
+                </kendo-grid-column>
+                <kendo-grid-column field="UnitPrice" title="Unit Price" width="180" filter="numeric" format="{0:c}">
+                </kendo-grid-column>
+                <kendo-grid-column field="Discontinued" width="120" filter="boolean">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                        <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+                    </ng-template>
+                </kendo-grid-column>
+            </kendo-grid>
+        </div>
+        <!-- ! END Table -->
+        <button type="button" name="" id="" class="at-btn" (click)="routeLastMenu()">Next</button>
+    </div>
+</div>
