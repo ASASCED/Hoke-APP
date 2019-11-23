@@ -23,12 +23,47 @@
 
 .mini-section {
     background-color: var(--backgroundBet);
-    height: 20em;
+    min-height: 20em;
     width: 100%;
     border-radius: var(--borderRadius);
     padding: 1em;
     color: #fff;
     margin-bottom: 1em;
+}
+
+.file {
+    background-color: #fff;
+    color: #000;
+    padding: 1.5em 1em;
+    border-radius: 0.5em;
+}
+
+.sub-title {
+    text-align: center;
+}
+
+.at-btn {
+    margin-top: 1em;
+    text-align: center;
+    text-decoration: none;
+    z-index: 10;
+    background-color: var(--fontFocus);
+    height: 3em;
+    border-radius: var(--borderRadius);
+    border: 1px solid #fff;
+    color: white;
+    text-transform: uppercase;
+    outline-style: none;
+    width: 2em;
+    margin-left: .2em;
+}
+
+.at-btn:hover {
+    background-color: #fff;
+    border: 1px solid var(--fontFocus);
+    color: var(--fontFocus);
+    transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 ul {

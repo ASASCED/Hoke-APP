@@ -20,6 +20,17 @@ export class LastMenuComponent implements OnInit {
         this.selector = 0;
     }
 
+    public listItems: Array<string> = [
+        'Baseball',
+        'Basketball',
+        'Cricket',
+        'Field Hockey',
+        'Football',
+        'Table Tennis',
+        'Tennis',
+        'Volleyball',
+    ];
+
     public state: State = {
         skip: 0,
         take: 5,

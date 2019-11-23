@@ -7,8 +7,8 @@
                 <li><a (click)="menuSelection(2)">General policy info</a></li>
                 <li><a (click)="menuSelection(3)">Drivers</a></li>
                 <li><a (click)="menuSelection(4)">Vehicles</a></li>
-                <li><a (click)="menuSelection(5)">Receipt</a></li>
-                <li><a (click)="menuSelection(6)">JustAuto forms</a></li>
+                <!-- <li><a (click)="menuSelection(5)">Receipt</a></li>
+                <li><a (click)="menuSelection(6)">JustAuto forms</a></li> -->
             </ul>
         </nav>
         <div class="col">
@@ -17,10 +17,9 @@
                     <h6>Import files</h6>
                 </div>
                 <div class="col">
-                    <div class="mini-section"></div>
-                </div>
-                <div class="col">
-                    <div class="mini-section"></div>
+                    <div class="mini-section">
+                        <input type="file" name="myFile" class="file">
+                    </div>
                 </div>
             </div>
             <div id="name-address" class="row animated fadeIn" *ngIf="selector == 1">
@@ -28,24 +27,110 @@
                     <h6>Name and Address</h6>
                 </div>
                 <div class="col">
-                    <div class="mini-section"></div>
+                    <div class="mini-section">
+                        <h6 class="sub-title">Name Insured</h6>
+                        <kendo-textbox-container>
+                            <input kendoTextBox value="Test, again" disabled />
+                        </kendo-textbox-container>
+                    </div>
                 </div>
                 <div class="col">
-                    <div class="mini-section"></div>
+                    <div class="mini-section">
+                        <h6 class="sub-title">Contact</h6>
+                        <kendo-textbox-container>
+                            <h6>Cell phone</h6>
+                            <input kendoTextBox value="1245434" disabled />
+                        </kendo-textbox-container>
+                        <kendo-textbox-container>
+                            <h6>Home phone</h6>
+                            <input kendoTextBox value="2343245" disabled />
+                        </kendo-textbox-container>
+                        <kendo-textbox-container>
+                            <h6>Email</h6>
+                            <input kendoTextBox value="test@test.com" disabled />
+                        </kendo-textbox-container>
+                    </div>
                 </div>
                 <div class="col-12">
-                    <div class="mini-section"></div>
+                    <div class="mini-section">
+                        <h6 class="sub-title">Mailing Address</h6>
+                        <kendo-textbox-container>
+                            <h6>Address</h6>
+                            <input width="2em" kendoTextBox value="1245434" disabled />
+                        </kendo-textbox-container>
+                        <kendo-textbox-container>
+                            <h6>City</h6>
+                            <input kendoTextBox value="2343245" disabled />
+                        </kendo-textbox-container>
+                        <kendo-textbox-container>
+                            <h6>State</h6>
+                            <input kendoTextBox value="test@test.com" disabled />
+                        </kendo-textbox-container>
+                        <kendo-textbox-container>
+                            <h6>ZIP</h6>
+                            <input kendoTextBox value="test@test.com" disabled />
+                        </kendo-textbox-container>
+                    </div>
                 </div>
                 <div class="col-12">
-                    <div class="mini-section"></div>
+                    <div class="mini-section">
+                        <h6 class="sub-title">Physical Address</h6>
+                        <kendo-textbox-container>
+                            <h6>Address</h6>
+                            <input width="2em" kendoTextBox value="1245434" disabled />
+                        </kendo-textbox-container>
+                        <kendo-textbox-container>
+                            <h6>City</h6>
+                            <input kendoTextBox value="2343245" disabled />
+                        </kendo-textbox-container>
+                        <kendo-textbox-container>
+                            <h6>State</h6>
+                            <input kendoTextBox value="test@test.com" disabled />
+                        </kendo-textbox-container>
+                        <kendo-textbox-container>
+                            <h6>ZIP</h6>
+                            <input kendoTextBox value="test@test.com" disabled />
+                        </kendo-textbox-container>
+                    </div>
                 </div>
             </div>
             <div id="general-policy" class="row animated fadeIn" *ngIf="selector == 2">
                 <div class="col-12">
                     <h6>General policy info</h6>
-                    <div class="row">
-                        <div class="mini-section">
-
+                    <div class="row mini-section">
+                        <div class="col-md-8">
+                            <kendo-textbox-container>
+                                <p>Company</p>
+                                <input kendoTextBox />
+                            </kendo-textbox-container>
+                            <kendo-textbox-container>
+                                <p>Program</p>
+                                <input kendoTextBox />
+                            </kendo-textbox-container>
+                            <kendo-textbox-container>
+                                <p>Policy #</p>
+                                <input kendoTextBox />
+                            </kendo-textbox-container>
+                            <kendo-textbox-container>
+                                <p>Source</p>
+                                <input kendoTextBox />
+                            </kendo-textbox-container>
+                            <kendo-textbox-container>
+                                <p>Term</p>
+                                <input kendoTextBox />
+                            </kendo-textbox-container>
+                            <kendo-textbox-container>
+                                <p>Billing Type</p>
+                                <input kendoTextBox />
+                            </kendo-textbox-container>
+                            <kendo-textbox-container>
+                                <p>Eff Date</p>
+                                <input kendoTextBox />
+                            </kendo-textbox-container>
+                            <kendo-textbox-container>
+                                <p>Exp Date</p>
+                                <input kendoTextBox />
+                            </kendo-textbox-container>
                         </div>
                     </div>
                     <!-- ! Table -->
@@ -86,34 +171,84 @@
             <div id="drivers" class="row animated fadeIn" *ngIf="selector == 3">
                 <div class="col-12">
                     <h6>Drivers</h6>
-                </div>
-                <div class="col">
-                    <div class="mini-section"></div>
-                </div>
-                <div class="col">
-                    <div class="mini-section"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <kendo-grid [data]="gridData" [pageSize]="state.take" [skip]="state.skip"
+                                [sort]="state.sort" [filter]="state.filter" [sortable]="true" [pageable]="true"
+                                [filterable]="true" (dataStateChange)="dataStateChange($event)">
+                                <kendo-grid-column field="ProductID" title="ID" width="40" [filterable]="false">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="ProductName" title="Product Name">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="FirstOrderedOn" title="First Ordered On" width="240"
+                                    filter="date" format="{0:d}">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="UnitPrice" title="Unit Price" width="180" filter="numeric"
+                                    format="{0:c}">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="Discontinued" width="120" filter="boolean">
+                                    <ng-template kendoGridCellTemplate let-dataItem>
+                                        <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+                                    </ng-template>
+                                </kendo-grid-column>
+                            </kendo-grid>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="vehicles" class="row animated fadeIn" *ngIf="selector == 4">
-                <div class="col-12">
+                <div class="col">
                     <h6>Vehicles</h6>
-                </div>
-                <div class="col">
-                    <div class="mini-section"></div>
-                </div>
-                <div class="col">
-                    <div class="mini-section"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <kendo-grid [data]="gridData" [pageSize]="state.take" [skip]="state.skip"
+                                [sort]="state.sort" [filter]="state.filter" [sortable]="true" [pageable]="true"
+                                [filterable]="true" (dataStateChange)="dataStateChange($event)">
+                                <kendo-grid-column field="ProductID" title="ID" width="40" [filterable]="false">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="ProductName" title="Product Name">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="FirstOrderedOn" title="First Ordered On" width="240"
+                                    filter="date" format="{0:d}">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="UnitPrice" title="Unit Price" width="180" filter="numeric"
+                                    format="{0:c}">
+                                </kendo-grid-column>
+                                <kendo-grid-column field="Discontinued" width="120" filter="boolean">
+                                    <ng-template kendoGridCellTemplate let-dataItem>
+                                        <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+                                    </ng-template>
+                                </kendo-grid-column>
+                            </kendo-grid>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="receipt" class="row animated fadeIn" *ngIf="selector == 5">
+            <!-- <div id="receipt" class="row animated fadeIn" *ngIf="selector == 5">
                 <div class="col-12">
                     <h6>Receipt</h6>
                 </div>
-                <div class="col">
-                    <div class="mini-section"></div>
+                <div class="col-12">
+                    <div class="mini-section">
+                        <h6>Invoice Items</h6>
+                        <div class="increment">
+                            <div class="col-xs-12 col-sm-6 example-col">
+                                <kendo-dropdownlist style="width: 350px;" [data]="listItems" [value]="'Basketball'"
+                                    class="drop-down">
+                                </kendo-dropdownlist>
+                                <kendo-textbox-container>
+                                    <input kendoTextBox value="1245434" />
+                                </kendo-textbox-container>
+                                <button class="at-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <div class="mini-section"></div>
+                <div class="col-12">
+                    <div class="mini-section">
+                        <h6>Payment Methods</h6>
+
+                    </div>
                 </div>
             </div>
             <div id="receipt" class="row animated fadeIn" *ngIf="selector == 6">
@@ -121,12 +256,13 @@
                     <h6>JustAuto Forms</h6>
                 </div>
                 <div class="col">
-                    <div class="mini-section"></div>
+                    <div class="mini-section">
+                    </div>
                 </div>
                 <div class="col">
                     <div class="mini-section"></div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
